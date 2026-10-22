@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solver Network - Gerenciador Inteligente de Redes</title>
+  <meta name="description" content="Scanner e Gerenciador de Rede Local com identificação de dispositivos, categorização automática, mapeamento de IPs livres e ocupados.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-container">
+    
+    <!-- Top Navigation Bar -->
+    <header class="topbar">
+      <div class="logo-area">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+            <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+            <line x1="6" y1="6" x2="6.01" y2="6"></line>
+            <line x1="6" y1="18" x2="6.01" y2="18"></line>
+            <path d="M12 10v4"></path>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>SOLVER<span>NETWORK</span></h1>
+          <span class="sub-tag">Network Discovery & IPAM</span>
+        </div>
+      </div>
+
+      <div class="network-badge-group">
+        <div class="badge-item active-iface" title="Adaptador de Rede Ativo">
+          <span class="badge-dot"></span>
+          <span id="badge-iface">Detectando adaptador...</span>
+        </div>
+        <div class="badge-item scope-select-badge" title="Escolha qual faixa de IP / sub-rede escanear deste adaptador">
+          <span class="badge-label">REDE ALVO:</span>
+          <select id="select-header-network" class="network-header-select mono">
+            <option value="">Carregando faixas de IP...</option>
+          </select>
+        </div>
+        <div class="badge-item ip-badge" title="Endereço IP Local e Máscara desta rede">
+          <span class="badge-label">MEU IP:</span>
+          <span id="badge-ip" class="mono">--</span>
+        </div>
+        <div class="badge-item gw-badge" title="Gateway Padrão (Roteador)">
+          <span class="badge-label">GATEWAY:</span>
+          <span id="badge-gateway" class="mono">--</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="btn-config-scope" class="btn btn-secondary" title="Configurar Faixa ou Escopo da Varredura">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          Escopo
+        </button>
+
+        <div class="dropdown">
+          <button id="btn-export-dropdown" class="btn btn-secondary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Exportar
+          </button>
+          <div class="dropdown-content">
+            <a href="/api/export?format=csv" target="_blank" id="btn-export-csv">Planilha CSV (.csv)</a>
+            <a href="/api/export?format=json" target="_blank" id="btn-export-json">Relatório JSON (.json)</a>
+          </div>
+        </div>
+
+        <button id="btn-start-scan" class="btn btn-primary" title="Iniciar varredura completa da rede selecionada">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" width="17" height="17">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span id="btn-scan-label">Escanear Rede</span>
+        </button>
+
+        <button id="btn-stop-scan" class="btn btn-danger" style="display: none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" width="17" height="17">
+            <rect x="6" y="6" width="12" height="12"></rect>
+          </svg>
+          Parar
+        </button>
+      </div>
+    </header>
+
+    <!-- Scan Progress Bar Alert -->
+    <div id="scan-progress-banner" class="progress-banner" style="display: none;">
+      <div class="progress-info">
+        <div class="progress-spinner"></div>
+        <span id="scan-status-text">Iniciando varredura ARP da rede...</span>
+      </div>
+      <div class="progress-track">
+        <div id="scan-progress-fill" class="progress-fill" style="width: 0%;"></div>
+      </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+
+      <!-- Top Metrics Dashboard -->
+      <section class="kpi-grid">
+        
+        <!-- Total IPs Card -->
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">TOTAL DE IPs NA REDE</span>
+            <div class="kpi-icon icon-total">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M2 12h20"></path>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="kpi-value-row">
+            <span id="stat-total-ips" class="kpi-number">--</span>
+            <span id="stat-subnet-mask" class="kpi-pill">Faixa /--</span>
+          </div>
+          <div class="kpi-footer">
+            <span id="stat-scope-desc">Aguardando varredura</span>
+          </div>
+        </div>
+
+        <!-- Occupied IPs Card -->
+        <div class="kpi-card card-occupied">
+          <div class="kpi-header">
+            <span class="kpi-title">IPs OCUPADOS</span>
+            <div class="kpi-icon icon-occupied">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+          </div>
+          <div class="kpi-value-row">
+            <span id="stat-occupied-ips" class="kpi-number text-occupied">--</span>
+            <span id="stat-occupancy-rate" class="kpi-pill pill-green">0% em uso</span>
+          </div>
+          <div class="kpi-footer">
+            <div class="mini-bar">
+              <div id="stat-occupied-bar" class="mini-bar-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Free IPs Card -->
+        <div class="kpi-card card-free">
+          <div class="kpi-header">
+            <span class="kpi-title">IPs LIVRES DISPONÍVEIS</span>
+            <div class="kpi-icon icon-free">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+              </svg>
+            </div>
+          </div>
+          <div class="kpi-value-row">
+            <span id="stat-free-ips" class="kpi-number text-free">--</span>
+            <span id="stat-free-pct" class="kpi-pill pill-blue">100% livres</span>
+          </div>
+          <div class="kpi-footer">
+            <span>Prontos para alocação DHCP / Fixa</span>
+          </div>
+        </div>
+
+        <!-- Devices Online Card -->
+        <div class="kpi-card card-devices">
+          <div class="kpi-header">
+            <span class="kpi-title">DISPOSITIVOS ATIVOS</span>
+            <div class="kpi-icon icon-active">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="kpi-value-row">
+            <span id="stat-devices-online" class="kpi-number text-cyan">--</span>
+            <span id="stat-duration" class="kpi-pill pill-purple">0.0s</span>
+          </div>
+          <div class="kpi-footer">
+            <span id="stat-last-time">Última leitura: Nenhuma</span>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- IP Allocation Matrix (IPAM Grid Map) -->
+      <section class="ipam-section">
+        <div class="section-header">
+          <div class="section-title-wrap">
+            <div class="pulse-indicator"></div>
+            <h2>Mapa Visual de Alocação de IPs (IPAM Matrix)</h2>
+          </div>
+          <div class="ipam-legend">
+            <div class="legend-item"><span class="dot-legend dot-occupied"></span> Ocupado</div>
+            <div class="legend-item"><span class="dot-legend dot-free"></span> Livre</div>
+            <div class="legend-item"><span class="dot-legend dot-local"></span> Este PC</div>
+            <div class="legend-item"><span class="dot-legend dot-gateway"></span> Gateway</div>
+            <button id="btn-toggle-ipam" class="btn-sm btn-subtle">Recolher Mapa</button>
+          </div>
+        </div>
+        
+        <div id="ipam-grid-wrapper" class="ipam-grid-wrapper">
+          <div id="ipam-block-bar" class="ipam-block-bar" style="display: none;">
+            <div class="ipam-block-selector">
+              <span>Sub-bloco da Rede:</span>
+              <select id="select-ipam-block" class="form-select-sm"></select>
+            </div>
+            <span id="ipam-scope-stats-summary" class="ipam-scope-summary"></span>
+          </div>
+          <div id="ipam-grid" class="ipam-grid">
+            <div class="ipam-empty-placeholder">Clique em "Escanear Rede" para visualizar os blocos de endereçamento IP.</div>
+          </div>
+          <div class="ipam-tooltip" id="ipam-tooltip"></div>
+        </div>
+      </section>
+
+      <!-- Category Filter Tabs -->
+      <section class="category-tabs-container">
+        <div class="category-tabs" id="category-tabs">
+          <button class="cat-tab active" data-category="all">
+            <span class="tab-icon">🌐</span>
+            <span class="tab-label">Todos</span>
+            <span class="tab-count" id="count-all">0</span>
+          </button>
+          <button class="cat-tab" data-category="computers">
+            <span class="tab-icon">💻</span>
+            <span class="tab-label">Computadores</span>
+            <span class="tab-count" id="count-computers">0</span>
+          </button>
+          <button class="cat-tab" data-category="phones">
+            <span class="tab-icon">📱</span>
+            <span class="tab-label">Celulares / Tablets</span>
+            <span class="tab-count" id="count-phones">0</span>
+          </button>
+          <button class="cat-tab" data-category="printers">
+            <span class="tab-icon">🖨️</span>
+            <span class="tab-label">Impressoras</span>
+            <span class="tab-count" id="count-printers">0</span>
+          </button>
+          <button class="cat-tab" data-category="network">
+            <span class="tab-icon">🌐</span>
+            <span class="tab-label">Rede / Roteadores</span>
+            <span class="tab-count" id="count-network">0</span>
+          </button>
+          <button class="cat-tab" data-category="media">
+            <span class="tab-icon">📺</span>
+            <span class="tab-label">Smart TVs & Mídia</span>
+            <span class="tab-count" id="count-media">0</span>
+          </button>
+          <button class="cat-tab" data-category="iot">
+            <span class="tab-icon">💡</span>
+            <span class="tab-label">IoT / Automação</span>
+            <span class="tab-count" id="count-iot">0</span>
+          </button>
+          <button class="cat-tab" data-category="unknown">
+            <span class="tab-icon">❓</span>
+            <span class="tab-label">Desconhecidos</span>
+            <span class="tab-count" id="count-unknown">0</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Inventory Section: Search & Device View -->
+      <section class="inventory-section">
+        <div class="inventory-toolbar">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="inventory-search" placeholder="Buscar por IP, MAC, Nome, Fabricante, Categoria...">
+            <button id="btn-clear-search" class="btn-clear-search" style="display: none;">✕</button>
+          </div>
+
+          <div class="toolbar-sort-wrap">
+            <label for="select-device-sort" class="sort-label">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <path d="M7 15l5 5 5-5"></path>
+                <path d="M7 9l5-5 5 5"></path>
+              </svg>
+              Ordenar:
+            </label>
+            <select id="select-device-sort" class="sort-select">
+              <option value="ip-asc">IP (Crescente)</option>
+              <option value="ip-desc">IP (Decrescente)</option>
+              <option value="name-asc">Nome / Dispositivo (A-Z)</option>
+              <option value="name-desc">Nome / Dispositivo (Z-A)</option>
+              <option value="category-asc">Categoria (A-Z)</option>
+              <option value="category-desc">Categoria (Z-A)</option>
+              <option value="vendor-asc">Fabricante (A-Z)</option>
+              <option value="vendor-desc">Fabricante (Z-A)</option>
+              <option value="latency-asc">Latência (Mais rápida)</option>
+              <option value="latency-desc">Latência (Mais lenta)</option>
+              <option value="mac-asc">Endereço MAC (A-Z)</option>
+              <option value="mac-desc">Endereço MAC (Z-A)</option>
+              <option value="ports-desc">Portas (Mais portas abertas)</option>
+              <option value="status-asc">Status (Gateway / Local primeiro)</option>
+            </select>
+          </div>
+
+          <div class="view-controls">
+            <span class="results-badge" id="results-count">0 dispositivos</span>
+            <div class="view-toggle">
+              <button id="view-mode-table" class="view-btn active" title="Visualização em Tabela">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <line x1="8" y1="6" x2="21" y2="6"></line>
+                  <line x1="8" y1="12" x2="21" y2="12"></line>
+                  <line x1="8" y1="18" x2="21" y2="18"></line>
+                  <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                  <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                  <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                </svg>
+              </button>
+              <button id="view-mode-cards" class="view-btn" title="Visualização em Cards">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Table View -->
+        <div id="devices-table-container" class="table-container">
+          <table class="devices-table" id="devices-table">
+            <thead>
+              <tr>
+                <th style="width: 50px;" class="th-sortable" data-sort="status" title="Clique para ordenar por Status">Status <span class="sort-icon">↕</span></th>
+                <th class="th-sortable" data-sort="name" title="Clique para ordenar por Dispositivo/Nome">Dispositivo / Identificação <span class="sort-icon">↕</span></th>
+                <th class="th-sortable" data-sort="category" title="Clique para ordenar por Categoria">Categoria <span class="sort-icon">↕</span></th>
+                <th class="th-sortable sorted-asc" data-sort="ip" title="Clique para ordenar por Endereço IP">Endereço IP <span class="sort-icon">▲</span></th>
+                <th class="th-sortable" data-sort="mac" title="Clique para ordenar por Endereço MAC">Endereço MAC <span class="sort-icon">↕</span></th>
+                <th class="th-sortable" data-sort="vendor" title="Clique para ordenar por Fabricante">Fabricante <span class="sort-icon">↕</span></th>
+                <th class="th-sortable" data-sort="latency" title="Clique para ordenar por Latência">Latência <span class="sort-icon">↕</span></th>
+                <th class="th-sortable" data-sort="ports" title="Clique para ordenar por Portas">Portas <span class="sort-icon">↕</span></th>
+                <th style="text-align: right; width: 120px;">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="devices-table-body">
+              <tr>
+                <td colspan="9" class="empty-state">
+                  <div class="empty-icon">📡</div>
+                  <h3>Nenhum dispositivo mapeado ainda</h3>
+                  <p>Inicie uma varredura para identificar todos os aparelhos conectados à sua rede.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Card Grid View -->
+        <div id="devices-cards-container" class="cards-grid" style="display: none;"></div>
+
+      </section>
+
+    </main>
+
+    <!-- Modal: Configuração de Escopo da Rede & Calculadora de IPs -->
+    <div id="modal-scope" class="modal-backdrop" style="display: none;">
+      <div class="modal-card modal-card-lg">
+        <div class="modal-header">
+          <div>
+            <h3>Configuração de Escopo & Cálculo de IPs</h3>
+            <span class="modal-subtitle">Identificação automática pela máscara e cálculo completo de endereços</span>
+          </div>
+          <button class="modal-close" id="btn-close-scope-modal">✕</button>
+        </div>
+        <div class="modal-body">
+          <p class="modal-desc">Selecione uma das sub-redes ativas identificadas pela máscara ou configure uma nova faixa:</p>
+          
+          <div class="scope-options">
+            
+            <!-- Detected scopes by mask -->
+            <label class="scope-option">
+              <input type="radio" name="scope_mode" value="detected" checked>
+              <div class="option-content" style="width: 100%;">
+                <strong>Sub-redes Detectadas na Máquina (Identificadas pela Máscara)</strong>
+                <span class="text-dim">Sub-redes e blocos ativos encontrados no seu adaptador de rede:</span>
+                <div id="detected-scopes-list" class="detected-scopes-container mt-2">
+                  <div style="font-size: 0.8rem; color: var(--text-dim);">Carregando sub-redes detectadas...</div>
+                </div>
+              </div>
+            </label>
+
+            <!-- Custom calculation by Netmask -->
+            <label class="scope-option">
+              <input type="radio" name="scope_mode" value="by_mask">
+              <div class="option-content" style="width: 100%;">
+                <strong>Calcular Escopo por IP e Máscara de Sub-rede</strong>
+                <span class="text-dim">Informe o IP e a máscara para calcular dinamicamente a faixa de hosts e executar a varredura:</span>
+                
+                <div class="range-inputs mt-2">
+                  <div style="flex: 1;">
+                    <label style="font-size: 0.72rem; color: var(--text-dim); display: block; margin-bottom: 3px;">IP Base:</label>
+                    <input type="text" id="calc-input-ip" class="form-input mono" placeholder="192.168.0.1">
+                  </div>
+                  <div style="flex: 1.2;">
+                    <label style="font-size: 0.72rem; color: var(--text-dim); display: block; margin-bottom: 3px;">Máscara de Sub-rede:</label>
+                    <select id="calc-select-mask" class="form-select mono">
+                      <option value="255.255.255.0">255.255.255.0 (/24 - 254 hosts)</option>
+                      <option value="255.255.254.0">255.255.254.0 (/23 - 510 hosts)</option>
+                      <option value="255.255.252.0">255.255.252.0 (/22 - 1.022 hosts)</option>
+                      <option value="255.255.248.0">255.255.248.0 (/21 - 2.046 hosts)</option>
+                      <option value="255.255.240.0">255.255.240.0 (/20 - 4.094 hosts)</option>
+                      <option value="255.255.0.0">255.255.0.0 (/16 - 65.534 hosts)</option>
+                      <option value="255.0.0.0">255.0.0.0 (/8 - Classe A)</option>
+                      <option value="custom">Outra Máscara Manual...</option>
+                    </select>
+                  </div>
+                </div>
+
+                <input type="text" id="calc-custom-mask-input" class="form-input mono mt-2" placeholder="Digite a máscara (ex: 255.255.255.192)" style="display: none;">
+
+                <!-- Live calculation preview -->
+                <div id="calc-preview-box" class="calc-preview-card">
+                  <div class="calc-stat-item">
+                    <span class="calc-stat-label">Rede CIDR</span>
+                    <span id="prev-cidr" class="calc-stat-val mono">--</span>
+                  </div>
+                  <div class="calc-stat-item">
+                    <span class="calc-stat-label">Máscara</span>
+                    <span id="prev-mask" class="calc-stat-val mono">--</span>
+                  </div>
+                  <div class="calc-stat-item">
+                    <span class="calc-stat-label">Faixa de Hosts</span>
+                    <span id="prev-range" class="calc-stat-val mono">--</span>
+                  </div>
+                  <div class="calc-stat-item">
+                    <span class="calc-stat-label">IPs Disponíveis</span>
+                    <span id="prev-usable" class="calc-stat-val calc-stat-highlight mono">--</span>
+                  </div>
+                </div>
+              </div>
+            </label>
+
+            <!-- Custom Manual Range -->
+            <label class="scope-option">
+              <input type="radio" name="scope_mode" value="custom_range">
+              <div class="option-content" style="width: 100%;">
+                <strong>Faixa Manual de IPs (Início e Fim)</strong>
+                <span class="text-dim">Especifique o primeiro e o último IP a serem verificados:</span>
+                <div class="range-inputs mt-2">
+                  <input type="text" id="input-range-start" class="form-input mono" placeholder="192.168.0.1">
+                  <span>até</span>
+                  <input type="text" id="input-range-end" class="form-input mono" placeholder="192.168.0.100">
+                </div>
+              </div>
+            </label>
+
+          </div>
+
+          <div class="form-group mt-3">
+            <label class="checkbox-label">
+              <input type="checkbox" id="check-deep-scan" checked>
+              <span>Varredura profunda de portas e serviços (detecta impressoras, SMB, web banners)</span>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" id="btn-cancel-scope">Cancelar</button>
+          <button class="btn btn-primary" id="btn-save-scope">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" width="16" height="16">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            Executar Varredura Completa
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: Editar Dispositivo -->
+    <div id="modal-edit-device" class="modal-backdrop" style="display: none;">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Editar Dispositivo</h3>
+          <button class="modal-close" id="btn-close-edit-modal">✕</button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Endereço IP:</label>
+            <input type="text" id="edit-device-ip" class="form-input mono" readonly>
+          </div>
+          <div class="form-group">
+            <label>Endereço MAC:</label>
+            <input type="text" id="edit-device-mac" class="form-input mono" readonly>
+          </div>
+          <div class="form-group">
+            <label>Nome Amigável / Descrição:</label>
+            <input type="text" id="edit-device-name" class="form-input" placeholder="Ex: Impressora RH, Celular Yale, etc.">
+          </div>
+          <div class="form-group">
+            <label>Categoria:</label>
+            <select id="edit-device-category" class="form-select">
+              <option value="computers">💻 Computador / Notebook</option>
+              <option value="phones">📱 Celular / Tablet</option>
+              <option value="printers">🖨️ Impressora</option>
+              <option value="network">🌐 Roteador / Equipamento de Rede</option>
+              <option value="media">📺 Smart TV / Dispositivo de Mídia</option>
+              <option value="iot">💡 IoT / Automação / Câmera</option>
+              <option value="unknown">❓ Desconhecido</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Anotações / Observações:</label>
+            <textarea id="edit-device-notes" class="form-textarea" rows="2" placeholder="Ex: Localizado no segundo andar, sala 204"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" id="btn-cancel-edit">Cancelar</button>
+          <button class="btn btn-primary" id="btn-save-device">Salvar Alterações</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

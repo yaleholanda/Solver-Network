@@ -1,0 +1,1678 @@
+{
+  "84398F": {
+    "vendor": "Fortinet",
+    "category": "network"
+  },
+  "00090F": {
+    "vendor": "Fortinet",
+    "category": "network"
+  },
+  "704CA5": {
+    "vendor": "Fortinet",
+    "category": "network"
+  },
+  "906CAC": {
+    "vendor": "Fortinet",
+    "category": "network"
+  },
+  "085B0E": {
+    "vendor": "Fortinet",
+    "category": "network"
+  },
+  "D8B370": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "784558": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "802AA8": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "E063DA": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "245A4C": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "74ACB9": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "F4E2C6": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "B4FBE4": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "0418D6": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "FCECDA": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "20EFBD": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "602232": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "70A741": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "9C05D6": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "E868E7": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "D021F9": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "18E91D": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "60CF84": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "B8975A": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "A8A159": {
+    "vendor": "Ubiquiti Inc",
+    "category": "network"
+  },
+  "00000C": {
+    "vendor": "Cisco Systems",
+    "category": "network"
+  },
+  "000142": {
+    "vendor": "Cisco Systems",
+    "category": "network"
+  },
+  "000143": {
+    "vendor": "Cisco Systems",
+    "category": "network"
+  },
+  "000164": {
+    "vendor": "Cisco Systems",
+    "category": "network"
+  },
+  "0001C7": {
+    "vendor": "Cisco Systems",
+    "category": "network"
+  },
+  "0001C9": {
+    "vendor": "Cisco Systems",
+    "category": "network"
+  },
+  "000216": {
+    "vendor": "Cisco Systems",
+    "category": "network"
+  },
+  "000217": {
+    "vendor": "Cisco Systems",
+    "category": "network"
+  },
+  "00180A": {
+    "vendor": "Cisco Meraki",
+    "category": "network"
+  },
+  "3456FE": {
+    "vendor": "Cisco Meraki",
+    "category": "network"
+  },
+  "E0553D": {
+    "vendor": "Cisco Meraki",
+    "category": "network"
+  },
+  "E848B8": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "50C7BF": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "AC84C6": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "54AF97": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "984827": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "D80D17": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "30DE4B": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "60A44C": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "F4F26D": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "B04E26": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "14CF92": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "704F57": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "A0F3C1": {
+    "vendor": "TP-Link",
+    "category": "network"
+  },
+  "805EC0": {
+    "vendor": "Intelbras",
+    "category": "network"
+  },
+  "A08CF8": {
+    "vendor": "Intelbras",
+    "category": "network"
+  },
+  "E0B9E5": {
+    "vendor": "Intelbras",
+    "category": "network"
+  },
+  "90A4DE": {
+    "vendor": "Intelbras",
+    "category": "network"
+  },
+  "60A7C5": {
+    "vendor": "Intelbras",
+    "category": "network"
+  },
+  "A41194": {
+    "vendor": "Intelbras",
+    "category": "network"
+  },
+  "285FDB": {
+    "vendor": "Intelbras",
+    "category": "network"
+  },
+  "E447B9": {
+    "vendor": "Intelbras",
+    "category": "network"
+  },
+  "64D154": {
+    "vendor": "MikroTik",
+    "category": "network"
+  },
+  "488F5A": {
+    "vendor": "MikroTik",
+    "category": "network"
+  },
+  "CC2DE0": {
+    "vendor": "MikroTik",
+    "category": "network"
+  },
+  "B869F4": {
+    "vendor": "MikroTik",
+    "category": "network"
+  },
+  "085531": {
+    "vendor": "MikroTik",
+    "category": "network"
+  },
+  "2C6104": {
+    "vendor": "MikroTik",
+    "category": "network"
+  },
+  "DC2C6E": {
+    "vendor": "MikroTik",
+    "category": "network"
+  },
+  "E48D8C": {
+    "vendor": "MikroTik",
+    "category": "network"
+  },
+  "00055D": {
+    "vendor": "D-Link",
+    "category": "network"
+  },
+  "000D88": {
+    "vendor": "D-Link",
+    "category": "network"
+  },
+  "1C7EE5": {
+    "vendor": "D-Link",
+    "category": "network"
+  },
+  "28107B": {
+    "vendor": "D-Link",
+    "category": "network"
+  },
+  "78542E": {
+    "vendor": "D-Link",
+    "category": "network"
+  },
+  "001B78": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "001E0B": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "00215A": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "002481": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "0025B3": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "082E5F": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "101F74": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "3C5282": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "9C8E99": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "A45D36": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "AC162D": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "B4B52F": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "CC3D82": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "D89D67": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "E4E749": {
+    "vendor": "HP Inc.",
+    "category": "printers"
+  },
+  "000048": {
+    "vendor": "Seiko Epson Corp",
+    "category": "printers"
+  },
+  "0026AB": {
+    "vendor": "Seiko Epson Corp",
+    "category": "printers"
+  },
+  "44D244": {
+    "vendor": "Seiko Epson Corp",
+    "category": "printers"
+  },
+  "64EB8C": {
+    "vendor": "Seiko Epson Corp",
+    "category": "printers"
+  },
+  "AC1826": {
+    "vendor": "Seiko Epson Corp",
+    "category": "printers"
+  },
+  "B0C554": {
+    "vendor": "Seiko Epson Corp",
+    "category": "printers"
+  },
+  "E03F49": {
+    "vendor": "Seiko Epson Corp",
+    "category": "printers"
+  },
+  "F8D027": {
+    "vendor": "Seiko Epson Corp",
+    "category": "printers"
+  },
+  "000085": {
+    "vendor": "Canon Inc.",
+    "category": "printers"
+  },
+  "001E8F": {
+    "vendor": "Canon Inc.",
+    "category": "printers"
+  },
+  "180C56": {
+    "vendor": "Canon Inc.",
+    "category": "printers"
+  },
+  "38E08E": {
+    "vendor": "Canon Inc.",
+    "category": "printers"
+  },
+  "7085C2": {
+    "vendor": "Canon Inc.",
+    "category": "printers"
+  },
+  "9CD24B": {
+    "vendor": "Canon Inc.",
+    "category": "printers"
+  },
+  "AC416A": {
+    "vendor": "Canon Inc.",
+    "category": "printers"
+  },
+  "008077": {
+    "vendor": "Brother Industries",
+    "category": "printers"
+  },
+  "001BA9": {
+    "vendor": "Brother Industries",
+    "category": "printers"
+  },
+  "30055C": {
+    "vendor": "Brother Industries",
+    "category": "printers"
+  },
+  "40B034": {
+    "vendor": "Brother Industries",
+    "category": "printers"
+  },
+  "E89EB4": {
+    "vendor": "Brother Industries",
+    "category": "printers"
+  },
+  "3C2AF4": {
+    "vendor": "Brother Industries",
+    "category": "printers"
+  },
+  "0000AA": {
+    "vendor": "Xerox Corp",
+    "category": "printers"
+  },
+  "000074": {
+    "vendor": "Ricoh Co Ltd",
+    "category": "printers"
+  },
+  "002673": {
+    "vendor": "Ricoh Co Ltd",
+    "category": "printers"
+  },
+  "000007": {
+    "vendor": "Xerox Corp",
+    "category": "printers"
+  },
+  "000400": {
+    "vendor": "Lexmark Int",
+    "category": "printers"
+  },
+  "002000": {
+    "vendor": "Lexmark Int",
+    "category": "printers"
+  },
+  "0017C8": {
+    "vendor": "Kyocera Document",
+    "category": "printers"
+  },
+  "00C0EE": {
+    "vendor": "Kyocera Document",
+    "category": "printers"
+  },
+  "F09FC2": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "FC4345": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "D065B3": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "10FFE0": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "C87F54": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "04ECD8": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "5CCD5B": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "00D76D": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "B81EA4": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "50B7C3": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "2CFDA1": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "480FCF": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "000393": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "000502": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "000A27": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "000D93": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "0010FA": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "001451": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "0016CB": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "0017F2": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "0019E3": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "001B63": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "001C42": {
+    "vendor": "Parallels / Apple",
+    "category": "computers"
+  },
+  "001D4F": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "001E52": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "001E8C": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "001F5B": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "001FF3": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "0021E9": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "002241": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "002312": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "002332": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "00236C": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "002436": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "002500": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "0025BC": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "002608": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "00264A": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "0026B0": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "0026BB": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "A4C361": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "ACBC32": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "B8782E": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "F45C89": {
+    "vendor": "Apple Inc",
+    "category": "phones"
+  },
+  "0000F0": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "0007AB": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "001247": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "0012FB": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "001599": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "00166B": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "0017C9": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "001A8A": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "001D25": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "001DF6": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "002119": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "0021D2": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "002339": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "0023D7": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "002454": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "002637": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "00265D": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "508569": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "5C0A5B": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "60A10A": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "8425DB": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "88366C": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "94350A": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "A89FBA": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "BC4486": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "C80210": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "D0176A": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "E47CF9": {
+    "vendor": "Samsung Electronics",
+    "category": "phones"
+  },
+  "009EEA": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "04CF8C": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "18F0E4": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "286C07": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "3480B3": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "50642B": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "584498": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "640980": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "7811DC": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "8CBEBE": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "A47733": {
+    "vendor": "Google, LLC",
+    "category": "media"
+  },
+  "B46BB6": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "C46E7B": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "E446DA": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "F460E2": {
+    "vendor": "Xiaomi Communications",
+    "category": "phones"
+  },
+  "000A28": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "000C41": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "000E9F": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "001180": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "0017EE": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "28F366": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "40786A": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "60BEB5": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "806C1B": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "B4CEF6": {
+    "vendor": "Motorola Mobility",
+    "category": "phones"
+  },
+  "00065B": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "000874": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "000BDB": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "000D56": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "000F1F": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "001143": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "00123F": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "001372": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "001422": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "00188B": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "180373": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "24B6FD": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "3417EB": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "484D7E": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "74867A": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "8CE748": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "B083FE": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "BC305B": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "D4BE5B": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "F8BC12": {
+    "vendor": "Dell Inc.",
+    "category": "computers"
+  },
+  "0012FE": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "00176F": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "0021CC": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "002622": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "28D244": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "507B9D": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "54EE75": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "60D9A0": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "70723C": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "8CE9C1": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "AC74B1": {
+    "vendor": "Lenovo",
+    "category": "computers"
+  },
+  "FC9D05": {
+    "vendor": "MSI (Micro-Star)",
+    "category": "computers"
+  },
+  "001617": {
+    "vendor": "MSI (Micro-Star)",
+    "category": "computers"
+  },
+  "002421": {
+    "vendor": "MSI (Micro-Star)",
+    "category": "computers"
+  },
+  "00300F": {
+    "vendor": "MSI (Micro-Star)",
+    "category": "computers"
+  },
+  "408D5C": {
+    "vendor": "Gigabyte Technology",
+    "category": "computers"
+  },
+  "D8BBC1": {
+    "vendor": "MSI (Micro-Star)",
+    "category": "computers"
+  },
+  "000C6E": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "0011D8": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "0015F2": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "001731": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "0018F3": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "001A92": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "001BFC": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "001D60": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "002215": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "002354": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "00248C": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "002618": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "107B44": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "38D547": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "40167E": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "50465D": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "90E6BA": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "AC9E17": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "B06EBF": {
+    "vendor": "ASUSTek Computer",
+    "category": "computers"
+  },
+  "0000E2": {
+    "vendor": "Acer Inc.",
+    "category": "computers"
+  },
+  "000124": {
+    "vendor": "Acer Inc.",
+    "category": "computers"
+  },
+  "006067": {
+    "vendor": "Acer Inc.",
+    "category": "computers"
+  },
+  "00A060": {
+    "vendor": "Acer Inc.",
+    "category": "computers"
+  },
+  "C80AA9": {
+    "vendor": "Acer Inc.",
+    "category": "computers"
+  },
+  "0002B3": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "000347": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "000423": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0007E9": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "000CF1": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "000E0C": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001111": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0012F0": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001302": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001320": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0013E8": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001500": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001517": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "00166F": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001676": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0018DE": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0019D1": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001B21": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001C23": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001D09": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001D72": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001E64": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001E65": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001E67": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "001F3B": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "00215C": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "00216A": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "00216B": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0022FB": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "002314": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "002315": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0024D6": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0024D7": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0026C6": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "0026C7": {
+    "vendor": "Intel Corporate",
+    "category": "computers"
+  },
+  "00072F": {
+    "vendor": "Realtek Semiconductor",
+    "category": "computers"
+  },
+  "000732": {
+    "vendor": "Realtek Semiconductor",
+    "category": "computers"
+  },
+  "000CE7": {
+    "vendor": "Realtek Semiconductor",
+    "category": "computers"
+  },
+  "0010E0": {
+    "vendor": "Realtek Semiconductor",
+    "category": "computers"
+  },
+  "001AE9": {
+    "vendor": "Realtek Semiconductor",
+    "category": "computers"
+  },
+  "0025D3": {
+    "vendor": "Realtek Semiconductor",
+    "category": "computers"
+  },
+  "00E04C": {
+    "vendor": "Realtek Semiconductor",
+    "category": "computers"
+  },
+  "525400": {
+    "vendor": "Realtek / QEMU VM",
+    "category": "computers"
+  },
+  "000D87": {
+    "vendor": "Gigabyte Technology",
+    "category": "computers"
+  },
+  "001D7D": {
+    "vendor": "Gigabyte Technology",
+    "category": "computers"
+  },
+  "1C1B0D": {
+    "vendor": "Gigabyte Technology",
+    "category": "computers"
+  },
+  "E0D55E": {
+    "vendor": "Gigabyte Technology",
+    "category": "computers"
+  },
+  "00155D": {
+    "vendor": "Microsoft (Hyper-V)",
+    "category": "computers"
+  },
+  "0017FA": {
+    "vendor": "Microsoft Corp",
+    "category": "computers"
+  },
+  "002248": {
+    "vendor": "Microsoft Corp",
+    "category": "computers"
+  },
+  "0050F2": {
+    "vendor": "Microsoft Corp",
+    "category": "computers"
+  },
+  "281878": {
+    "vendor": "Microsoft Surface",
+    "category": "computers"
+  },
+  "7CE9D3": {
+    "vendor": "Microsoft Xbox",
+    "category": "media"
+  },
+  "0005C9": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "001C62": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "001E75": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "001FD7": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "002483": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "10683F": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "203DB2": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "28ED6A": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "3C5AB4": {
+    "vendor": "Google, LLC",
+    "category": "media"
+  },
+  "702C1F": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "A823FE": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "CC2D8C": {
+    "vendor": "LG Electronics",
+    "category": "media"
+  },
+  "00014A": {
+    "vendor": "Sony Group",
+    "category": "media"
+  },
+  "00041F": {
+    "vendor": "Sony Group",
+    "category": "media"
+  },
+  "000A4C": {
+    "vendor": "Sony Group",
+    "category": "media"
+  },
+  "000D67": {
+    "vendor": "Sony Group",
+    "category": "media"
+  },
+  "001315": {
+    "vendor": "Sony Group",
+    "category": "media"
+  },
+  "0015C1": {
+    "vendor": "Sony Group",
+    "category": "media"
+  },
+  "0019C5": {
+    "vendor": "Sony Group",
+    "category": "media"
+  },
+  "001D28": {
+    "vendor": "Sony Group",
+    "category": "media"
+  },
+  "00248D": {
+    "vendor": "Sony Group",
+    "category": "media"
+  },
+  "F8461C": {
+    "vendor": "Sony PlayStation",
+    "category": "media"
+  },
+  "709E29": {
+    "vendor": "Sony PlayStation",
+    "category": "media"
+  },
+  "000D4B": {
+    "vendor": "Roku, Inc.",
+    "category": "media"
+  },
+  "080581": {
+    "vendor": "Roku, Inc.",
+    "category": "media"
+  },
+  "20F543": {
+    "vendor": "Roku, Inc.",
+    "category": "media"
+  },
+  "84EA99": {
+    "vendor": "Roku, Inc.",
+    "category": "media"
+  },
+  "ACAE19": {
+    "vendor": "Roku, Inc.",
+    "category": "media"
+  },
+  "B0A737": {
+    "vendor": "Roku, Inc.",
+    "category": "media"
+  },
+  "D4A33D": {
+    "vendor": "Roku, Inc.",
+    "category": "media"
+  },
+  "00FC8B": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "18742E": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "34D270": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "40B4CD": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "44650D": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "6854FD": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "747548": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "84D6D0": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "A002DC": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "FC65DE": {
+    "vendor": "Amazon Technologies",
+    "category": "media"
+  },
+  "001A11": {
+    "vendor": "Google, LLC",
+    "category": "media"
+  },
+  "546009": {
+    "vendor": "Google, LLC",
+    "category": "media"
+  },
+  "94EB2C": {
+    "vendor": "Google, LLC",
+    "category": "media"
+  },
+  "D86C63": {
+    "vendor": "Google, LLC",
+    "category": "media"
+  },
+  "F88FCA": {
+    "vendor": "Google, LLC",
+    "category": "media"
+  },
+  "18FE34": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "240AC4": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "246F28": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "24B2DE": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "2C3AE8": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "30AEA4": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "3C71BF": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "485519": {
+    "vendor": "Shelly / Allterco",
+    "category": "iot"
+  },
+  "4C11AE": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "545A77": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "68C63A": {
+    "vendor": "ITEAD / Sonoff",
+    "category": "iot"
+  },
+  "70039F": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "78E36D": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "807D3A": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "840D8E": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "84F3EB": {
+    "vendor": "Tuya Smart",
+    "category": "iot"
+  },
+  "94B97E": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "A4CF12": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "AC67B2": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "B4E62D": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "BCDD9C": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "C44F33": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "CC50E3": {
+    "vendor": "Shelly / Allterco",
+    "category": "iot"
+  },
+  "D8A01D": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "DC4F22": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "E09806": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "ECFABC": {
+    "vendor": "Espressif Inc.",
+    "category": "iot"
+  },
+  "10D561": {
+    "vendor": "Tuya Smart",
+    "category": "iot"
+  },
+  "68572D": {
+    "vendor": "Tuya Smart",
+    "category": "iot"
+  },
+  "708976": {
+    "vendor": "Tuya Smart",
+    "category": "iot"
+  },
+  "7CB0C2": {
+    "vendor": "Tuya Smart",
+    "category": "iot"
+  },
+  "A09208": {
+    "vendor": "Tuya Smart",
+    "category": "iot"
+  },
+  "B827EB": {
+    "vendor": "Raspberry Pi",
+    "category": "computers"
+  },
+  "DCA632": {
+    "vendor": "Raspberry Pi",
+    "category": "computers"
+  },
+  "E45F01": {
+    "vendor": "Raspberry Pi",
+    "category": "computers"
+  },
+  "28CDC1": {
+    "vendor": "Raspberry Pi",
+    "category": "computers"
+  },
+  "001788": {
+    "vendor": "Philips Lighting (Hue)",
+    "category": "iot"
+  },
+  "ECB5FA": {
+    "vendor": "Philips Lighting (Hue)",
+    "category": "iot"
+  },
+  "349454": {
+    "vendor": "Shelly / Allterco",
+    "category": "iot"
+  },
+  "001217": {
+    "vendor": "Hikvision Digital",
+    "category": "iot"
+  },
+  "4419B6": {
+    "vendor": "Hikvision Digital",
+    "category": "iot"
+  },
+  "C056E3": {
+    "vendor": "Hikvision Digital",
+    "category": "iot"
+  },
+  "14B457": {
+    "vendor": "Dahua Technology",
+    "category": "iot"
+  },
+  "3C18A0": {
+    "vendor": "Dahua Technology",
+    "category": "iot"
+  },
+  "9002A9": {
+    "vendor": "Dahua Technology",
+    "category": "iot"
+  },
+  "000569": {
+    "vendor": "VMware, Inc.",
+    "category": "computers"
+  },
+  "000C29": {
+    "vendor": "VMware, Inc.",
+    "category": "computers"
+  },
+  "005056": {
+    "vendor": "VMware, Inc.",
+    "category": "computers"
+  },
+  "080027": {
+    "vendor": "Oracle VirtualBox",
+    "category": "computers"
+  }
+}

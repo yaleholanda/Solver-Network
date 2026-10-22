@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local SQLite Database (Contains private local network scans and device history)
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+data/*.db-journal
+
+# Keep top_ouis.json
+!data/top_ouis.json
+
+# Environment and secrets
+.env
+.env.local
+*.env
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.agents/
